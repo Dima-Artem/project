@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>java script</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<body>
+<script>
+  'use strict';
+let money = prompt("Ваш бюджет на месяц?"),
+    time = prompt("Введите дату в формате YYYY-MM-DD"),
+    expense1 = prompt('Введите обязательную статью расходов в этом месяце'),
+    cost1 = prompt('Во сколько обойдется?'),
+    expense2 = prompt('Введите обязательную статью расходов в этом месяце'),
+    cost2 = prompt('Во сколько обойдется?'),
+    optionalExpenses = {},
+    income = [],
+    appData = {
+    budget: money,
+    timeData: time,
+    expenses: {
+        expense1: cost1,
+        expense2: cost2
+        },
+    optionalExpenses1:optionalExpenses,
+    income1:income,
+    saving:false
+    };
+appData.expenses[expense1]=cost1;
+appData.expenses[expense2]=cost2;
+
+console.log(appData.expenses);
+alert(appData.budget/30);
+console.log(typeof(appData.budget/30));
+
+</script>
+</body>
